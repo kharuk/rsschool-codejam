@@ -1,4 +1,4 @@
-function recursion(tree) {
+module.exports = function recursion(tree) {
     let resultArray = [];
 
     function treeTraversal(node, arr, index) {
@@ -10,11 +10,11 @@ function recursion(tree) {
         if (node.left){
             treeTraversal(node.left, arr, index+1);
         }
-        if (node.left){
+        if (node.right){
             treeTraversal(node.right, arr, index+1);
         }
     }
 
     treeTraversal(tree, resultArray, 0);
     return resultArray;
-}
+};
